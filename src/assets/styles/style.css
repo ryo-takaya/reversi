@@ -1,0 +1,28 @@
+.container {
+  width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(8, 100px);
+  grid-template-rows: repeat(8, 100px);
+}
+
+.grid-item {
+  background-color: green;
+  border: solid black 1px;
+}
+
+[data-color="b"]::after {
+  content: "";
+  display: block;
+  background-color: black;
+  border-radius: 50%;
+  height: 100%;
+}
+
+[data-color="w"]::after {
+  content: "";
+  display: block;
+  background-color: white;
+  border-radius: 50%;
+  height: 100%;
+}
