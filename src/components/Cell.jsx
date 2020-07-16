@@ -24,17 +24,10 @@ const Cell = (props) => {
     }
 
     changeColor(bord, getTarget, dispatch, color, row, column);
-    //  e.target.dataset.color = color;
+
     dispatch({ type: "CHANGE_STONE", color: color === "b" ? "w" : "b" });
   }
 
-  // useEffect(() => {
-  //   cell.current.addEventListener("click", () => {
-  //     const result = color === "b" ? "w" : "b";
-  //     console.log(color);
-  //     dispatch({ type: "CHANGE_STONE", color: result });
-  //   });
-  // }, []);
   return (
     <div
       data-color={props.initialColor}

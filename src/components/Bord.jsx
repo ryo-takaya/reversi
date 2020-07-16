@@ -20,19 +20,7 @@ const Bord = () => {
     }
   }
 
-  return (
-    <div
-      style={{
-        position: "absolute",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-      }}
-      className="container"
-    >
-      {list}
-    </div>
-  );
+  return <div className="container">{list}</div>;
 };
 
 export default Bord;

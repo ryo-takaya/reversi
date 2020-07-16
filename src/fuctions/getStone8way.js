@@ -50,7 +50,11 @@ const getUp = (row, column, bord, currentcolor, enemy) => {
 
 const getUpRight = (row, column, bord, currentcolor, enemy) => {
   const upRight = [];
-  for (row--, column++; 0 <= row && column >= 7; row--, column++) {
+  console.log("row", 0 <= row);
+  console.log("column", column <= 7);
+  console.log(column);
+  for (row--, column++; 0 <= row && column <= 7; row--, column++) {
+    console.log("u");
     upRight.push({ color: bord[row][column], location: { row, column } });
   }
 
@@ -68,6 +72,7 @@ const getUpRight = (row, column, bord, currentcolor, enemy) => {
   return [];
 };
 const getRight = (row, column, bord, currentcolor, enemy) => {
+  console.log("r");
   const Right = [];
   for (column++; column <= 7; column++) {
     Right.push({ color: bord[row][column], location: { row, column } });
